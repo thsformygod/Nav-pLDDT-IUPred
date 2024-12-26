@@ -1,1 +1,107 @@
+For Xray, SPA, Tomo dataset:
+id_01:	Uniprot ID
+no:	number used in this study
+type:	experiment type
+struct_ref_seq_pdbx_db_accession:	reference id from PDB
+helper:	entry id for PDB
+modeled:	residue postion on sequence that belongs to "modeled" in this study.
+hard missing:	residue postion on sequence that belongs to "hard missing" in this study.
+soft missing:	residue postion on sequence that belongs to "soft missing" in this study.
+all_index:	All residue postion on sequence.
+pLDDT:	pLDDT score of sequence.
+IUPRED:	IUPred score of sequence.
+count_modeled:	counts of residues that belongs to "modeled" in this study.
+count_hardmissing:	counts of residues that belongs to "hard missing" in this study.
+count_softmissing:	counts of residues that belongs to "soft missing" in this study.
+count_all:	counts of all residues.
+code_index:	code of types of residue on sequence. -2: hard missing; -1: soft missing; 1: modeled.
+modeled_pLDDT:	pLDDT score of these "modeled" residues.
+hardmissing_pLDDT:	pLDDT score of these "hard missing" residues.
+softmissing_pLDDT:	pLDDT score of these "soft missing" residues.
+all_pLDDT:	pLDDT score of all residues
+count_modeled_pLDDT_low: counts of residues that have pLDDT under 70 in "modeled" group.
+count_hardmissing_pLDDT_low: counts of residues that have pLDDT under 70 in "hard missing" group.
+count_softmissing_pLDDT_low: counts of residues that have pLDDT under 70 in "soft missing" group.
+count_all_pLDDT_low: counts of all residues that have pLDDT under 70.
+modeled_IUPRED: IUPred score of these "modeled" residues.
+hardmissing_IUPRED: IUPred score of these "hard missing" residues.
+softmissing_IUPRED: IUPred score of these "soft missing" residues.
+all_IUPRED: IUPred score of all residues
+count_modeled_IUPRED_low: counts of residues that have IUPred over or equal 0.5 in "modeled" group.
+hardmissing_IUPRED_low: counts of residues that have IUPred over or equal 0.5 in "hard missing" group.
+count_softmissing_IUPRED_low: counts of residues that have IUPred over or equal 0.5 in "soft missing" group.
+count_all_IUPRED_low: counts of all residues that have IUPred over or equal 0.5.
+ALL_R_counts: counts of amino acid residues are "R".
+ALL_H_counts: counts of amino acid residues are "H".
+ALL_K_counts: counts of amino acid residues are "K".
+ALL_D_neg_counts: counts of amino acid residues are "D".
+ALL_E_neg_counts: counts of amino acid residues are "E".
+ALL_S_pol_uncharge_counts: counts of amino acid residues are "S".
+ALL_T_pol_uncharge_counts: counts of amino acid residues are "T".
+ALL_N_pol_uncharge_counts: counts of amino acid residues are "N".
+ALL_Q_pol_uncharge_counts: counts of amino acid residues are "Q".
+ALL_C_Sp_counts: counts of amino acid residues are "C".
+ALL_G_Sp_counts: counts of amino acid residues are "G".
+ALL_P_Sp_counts: counts of amino acid residues are "P".
+ALL_A_hydro_counts: counts of amino acid residues are "A".
+ALL_V_hydro_counts: counts of amino acid residues are "V".
+ALL_I_hydro_counts: counts of amino acid residues are "I".
+ALL_L_hydro_counts: counts of amino acid residues are "L".
+ALL_M_hydro_counts: counts of amino acid residues are "M".
+ALL_F_hydro_counts: counts of amino acid residues are "F".
+ALL_Y_hydro_counts: counts of amino acid residues are "Y".
+ALL_W_hydro_counts: counts of amino acid residues are "W".
+id: Uniprot ID (to check nothing goes wrong)
+helper: chain entity  (to check nothing goes wrong)
+recvd_initial_deposition_date: PDBs received date
+release_date: PDBs released date
+has 2022-2023: whether or not PDBs used in this line has date post 2022
+releasedate only has 2022-2023: whether or not all PDBs used in this line only has date post 2022
+helix: counts of residues belong to helix, by Uniprot context.
+sheet: counts of residues belong to sheet, by Uniprot context.
+turn: counts of residues belong to turn, by Uniprot context.
+coil: counts of residues belong to coil, by Uniprot context.
+
+
+
+
+For Human dataset:
+Uniprot:	Uniprot ID for this protein
+counts_full:	counts of residues of full sequence
+counts_structured:	counts of residues of sequence that have represented with PDB models (202403)
+counts_no_structured:	counts of residues of sequence that have represented without PDB models (202403)
+nostructured_model_pLDDT_%:	percentage of counts of no_structured residues that has been "modeled" labeled by pLDDT model from this study (assume residue pLDDT over 70 is "modeled")
+nostructured_model_lstm_%:	percentage of counts of no_structured residues that has been "modeled" labeled by SPA-LSTM model from this study。
+Sequence：	protein sequence
+predicted_pLDDT_code: the code of predicted results by pLDDT model of this study. -2: "hard missing"; -1: "soft missing"; 1: "modeled".
+predicted_IUPred_code: the code of predicted results by IUPred model of this study. -2: "hard missing"; -1: "soft missing"; 1: "modeled".
+predicted_lstm_code: the code of predicted results by SPA-LSTM model of this study. -2: "hard missing"; -1: "soft missing"; 1: "modeled".
+pLDDTs： pLDDT scores of sequence.
+IUPred： IUPred scores of sequence.
+Entry Name: From Uniprot
+Protein names: From Uniprot
+Gene Names: From Uniprot
+Organism: From Uniprot
+Length: From Uniprot
+Gene Ontology (biological process): From Uniprot
+Gene Ontology (cellular component): From Uniprot
+Gene Ontology (molecular function): From Uniprot
+Gene Ontology (GO): From Uniprot
+Gene Ontology IDs: From Uniprot
+3D: From Uniprot
+Beta strand: From Uniprot
+Turn: From Uniprot
+Helix: From Uniprot
+Coiled coil: From Uniprot
+Motif: From Uniprot
+Protein families: From Uniprot
+Compositional bias: From Uniprot
+Domain [CC]: From Uniprot
+Domain [FT]: From Uniprot
+Repeat: From Uniprot
+Region: From Uniprot
+Zinc finger: From Uniprot
+Sequence similarities: From Uniprot
+DNA binding	Function: From Uniprot
+[CC]: From Uniprot
 
