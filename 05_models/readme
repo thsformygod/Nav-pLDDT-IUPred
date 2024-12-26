@@ -1,1 +1,16 @@
+For this study, we produced two LSTM model:
 
+Xray before 2022_output2_balanced_model_256_1500_e2.h5
+This one was trained on Xray dataset (before 2022 with balanced, sequenced with too less "hard missing" residues were excluded during training), it was trained with neuron 256, 1500 padding, epoch 2.
+
+
+
+
+
+SPA before 2022_output2_balanced_model_300_2500_e2.h5
+This one was trained on SPA dataset (before 2022 with balanced, sequenced with too less "hard missing" residues were excluded during training), it was trained with neuron 300, 2500 padding, epoch 2.
+
+
+We tested rounds of epoch, and no further significant improvements on validation dataset after 8 epochs, and 2 to 8 are almost same.
+
+In a further tests (not in paper, but we mentioned that), increasing neruron and balancing training are two factors we observed that could improve F1-score, but that's a bit late after we have prepared almost all final data... And, we think a more dedicated dataset re-building from all PDBs is more promising.
