@@ -1,0 +1,11 @@
+This 03 build model shows example of training LSTM on Xray or SPA sequences before 2022, then automatically validated model and output saved model.
+please keep the folder as same as default, to avoid something error of reading path (but most path can be changed to any desired, anyone could try)
+
+The inputs folder contain prepared input sequences for training, for every five lines: first line, id of protein entry; second line, protein sequence; third line, pLDDT score sequence; forth line, IUPred score sequence; fifth line, residue type. Specially, 1 means this residue is "modeled", -2 means "hard missing", -1 means "soft missing".
+
+For inputs folder, "Xray" means dataset from Xray dataset, "SPA" means dataset from single particle analysis dataset. "_balanced" means more balanced sequences that filter out sequences which have too less "hard missing" residues (5 residues at least).
+
+For intermediate files, they would be saved to "intermediate/" folder.
+
+For model trained and valdiation summary, these would be saved to "outputs/" folder.
+
