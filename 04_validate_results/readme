@@ -1,0 +1,24 @@
+This 04_validate_results shows example of validate pLDDT, IUPred and LSTM on Xray, SPA and Tomo sequences behind 2022, then automatically analysis.
+please keep the folder as same as default, to avoid something error of reading path (but most path can be changed to any desired, anyone could try)
+
+The inputs folder contain prepared input sequences for validation.
+For inputs, for every five lines: 
+first line, id of protein entry; 
+second line, protein sequence; 
+third line, pLDDT score sequence; 
+forth line, IUPred score sequence; 
+fifth line, residue type of true label. Specially, 1 means this residue is "modeled", -2 means "hard missing", -1 means "soft missing".
+sixth line, residue type of predicted. Specially, 0 means this residue is "hard missing", 1 means "soft missing", 2 means "modeled".
+
+
+For inputs folder has three example inputs:
+Validation_result_SPA before 2022_output2_balanced_model_300_2500_e2_SPA behind 2022_output2_AAplus
+Validation_result_SPA before 2022_output2_balanced_model_300_2500_e2_Tomo behind 2022_output2_AAplus
+Validation_result_Xray before 2022_output2_balanced_model_256_1500_e2_Xray behind 2022_output2_AAplus
+ 
+for example, the "Validation_result_SPA before 2022_output2_balanced_model_300_2500_e2_SPA behind 2022_output2_AAplus" means predicted result sequences [trained by "SPA before 2022_output2_balanced", model name "model_300_2500_e2", and validated on file "SPA behind 2022_output2", the "_AAplus" means added with protein sequence into validation result as second line. (adding sequence of input can be done easily)
+
+For valdiation summary, these would be saved to "outputs/" folder. Specially, three kinds of outputs would be output to show analysis results:
+"_output1": This output contains all residues of each regions, for example, the residues of [amino acids, plddt, IUPred] for short regions are all included.
+"_output2": This output contains all counts of residues compositions, the mean and std of each type of validations and so on.
+"_summary": This output contains TP, TN, FP and FN of each results as finial summary.
